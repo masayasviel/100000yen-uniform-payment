@@ -32,7 +32,7 @@ phina.define("MainScene", {
         setTimeout(() => this.exit({
             score: self.count
         }), 10 * 1000);
-        setInterval(() =>this.increaseVirus(), 500);
+        setInterval(() =>this.increaseVirus(), 200);
     },
     increaseVirus: function(){
         const self = this;
