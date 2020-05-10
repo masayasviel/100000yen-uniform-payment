@@ -39,8 +39,8 @@ phina.define("MainScene", {
         const virus = Sprite("virus", VIRUS_SIZE, VIRUS_SIZE)
                 .addChildTo(this.virusGroup)
                 .setPosition(
-                    Random.randint(VIRUS_SIZE/2, SCREEN_WIDTH - VIRUS_SIZE/2),
-                    Random.randint(VIRUS_SIZE/2, SCREEN_HEIGHT - VIRUS_SIZE/2)
+                    Random.randint(self.gridX.span(3), self.gridX.span(13)),
+                    Random.randint(self.gridY.span(3), self.gridY.span(13))
                 );
             virus.setInteractive(true);
             virus.onpointstart = function() {
